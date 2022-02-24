@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "sqltextrequest.cpp"
+#include "tablelist.cpp"
+#include "tableinsert.cpp"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),

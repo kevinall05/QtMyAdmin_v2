@@ -27,7 +27,10 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    connexion.cpp
+    connexion.cpp \
+    sqltextrequest.cpp \
+    tablelist.cpp \
+    tableinsert.cpp
 
 HEADERS += \
         mainwindow.h \
