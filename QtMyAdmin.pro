@@ -28,9 +28,9 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     connexion.cpp \
-    sqltextrequest.cpp \
     tablelist.cpp \
-    tableinsert.cpp
+    tableinsert.cpp \
+    sqltextrequest.cpp
 
 HEADERS += \
         mainwindow.h \
