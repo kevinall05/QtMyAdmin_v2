@@ -19,7 +19,20 @@
    <string>QtMyAdmin</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">QPushButton {
+border: 2px solid #6c78af; 
+border-radius: 14; 
+padding: 5px 30px;
+font-weight: 700;
+color: #6c78af;
+transition: all 0.3s;
+}
+QPushButton:hover {
+background:#292929;
+color: white;
+border: 2px solid #f89c0e; 
+
+}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -143,9 +156,10 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_8">
           <item>
-           <widget class="QTableWidget" name="tableWidgetTablesList">
+           <widget class="QListWidget" name="listWidgetTablesList">
             <property name="styleSheet">
-             <string notr="true">max-width: 250px;</string>
+             <string notr="true">border: 2px solid #6c78af; 
+max-width: 250px;</string>
             </property>
            </widget>
           </item>
@@ -154,8 +168,11 @@
        </layout>
       </widget>
       <widget class="QTabWidget" name="tabWidgetSections">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
@@ -163,14 +180,18 @@
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QTableWidget" name="tableWidgetStructure"/>
+          <widget class="QTableWidget" name="tableWidgetStructure">
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid #6c78af; </string>
+           </property>
+          </widget>
          </item>
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
             <widget class="QLabel" name="label">
              <property name="text">
-              <string>Ajouter une table :</string>
+              <string>Ajoutez une table :</string>
              </property>
             </widget>
            </item>
@@ -192,7 +213,11 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <widget class="QLineEdit" name="lineEditTableName"/>
+            <widget class="QLineEdit" name="lineEditTableName">
+             <property name="styleSheet">
+              <string notr="true">border: 2px solid #6c78af; border-radius: 10;</string>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QLabel" name="label_2">
@@ -243,6 +268,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButtonAddTable">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="text">
               <string>Ajouter</string>
              </property>
@@ -299,6 +327,9 @@
          </item>
          <item>
           <widget class="QPlainTextEdit" name="plainTextEditSelectRequest">
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid #6c78af; </string>
+           </property>
            <property name="placeholderText">
             <string>Tapez votre requête ici ...</string>
            </property>
@@ -321,6 +352,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButtonSqlExecut">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="text">
               <string>Exécuter</string>
              </property>
@@ -329,7 +363,18 @@
           </layout>
          </item>
          <item>
-          <widget class="QTableWidget" name="tableWidgetSelect"/>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Résultat de la requête :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid #6c78af;</string>
+           </property>
+          </widget>
          </item>
         </layout>
        </widget>
@@ -338,6 +383,30 @@
          <string>Insérer</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>Insérez les champs :</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
          <item>
           <widget class="QTableWidget" name="tableWidgetRequestInsert"/>
          </item>
@@ -358,6 +427,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="pushButtonInsertExecut">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="text">
               <string>Exécuter</string>
              </property>
@@ -383,7 +455,7 @@
      <x>0</x>
      <y>0</y>
      <width>1095</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
