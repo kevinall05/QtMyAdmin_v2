@@ -2,15 +2,21 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QDialog>
+#include "ui_mainwindow.h"
+#include "mainwindow.h"
 
-void afficherTable()
+void MainWindow::afficherTable()
 {
     QString txtReq;
-    txtReq=("SHOW TABLE");
+    txtReq=("SHOW TABLES");
     QSqlQuery req(txtReq);
+    qDebug()<<txtReq;
 
-    if(req.next())
+    while(req.next())
     {
         qDebug()<<"Coucou";
+        ui->listWidgetTablesList->addItem(req.value(0).toString());
     }
 }
+
+
