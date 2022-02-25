@@ -155,7 +155,7 @@
       </widget>
       <widget class="QTabWidget" name="tabWidgetSections">
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
