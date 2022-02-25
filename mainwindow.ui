@@ -12,14 +12,20 @@
   </property>
   <property name="font">
    <font>
-    <family>Quicksand</family>
+    <family>quicksand</family>
+    <pointsize>9</pointsize>
+    <strikeout>false</strikeout>
    </font>
   </property>
   <property name="windowTitle">
    <string>QtMyAdmin</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton {
+   <string notr="true">*{
+font-family: quicksand;
+}
+
+QPushButton {
 border: 2px solid #6c78af; 
 border-radius: 14; 
 padding: 5px 30px;
@@ -46,7 +52,7 @@ border: 2px solid #f89c0e;
       </property>
       <property name="font">
        <font>
-        <family>Quicksand</family>
+        <family>quicksand</family>
        </font>
       </property>
       <property name="layoutDirection">
@@ -84,6 +90,7 @@ border: 2px solid #f89c0e;
            <widget class="QLabel" name="FirstTitle">
             <property name="font">
              <font>
+              <family>quicksand</family>
               <pointsize>-1</pointsize>
               <weight>75</weight>
               <bold>true</bold>
@@ -101,6 +108,7 @@ border: 2px solid #f89c0e;
            <widget class="QLabel" name="SecondTitle">
             <property name="font">
              <font>
+              <family>quicksand</family>
               <pointsize>-1</pointsize>
               <weight>75</weight>
               <bold>true</bold>
@@ -168,11 +176,17 @@ max-width: 250px;</string>
        </layout>
       </widget>
       <widget class="QTabWidget" name="tabWidgetSections">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">

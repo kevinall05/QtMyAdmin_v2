@@ -6,13 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>602</width>
-    <height>499</height>
+    <width>357</width>
+    <height>412</height>
    </rect>
   </property>
   <property name="font">
    <font>
     <family>Quicksand</family>
+    <pointsize>11</pointsize>
    </font>
   </property>
   <property name="windowTitle">
@@ -34,19 +35,6 @@ border: 2px solid #f89c0e;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
-    <spacer name="verticalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
@@ -168,7 +156,7 @@ border: 2px solid #f89c0e;
      <item>
       <widget class="QLabel" name="labelConnexion">
        <property name="styleSheet">
-        <string notr="true">font-size: 30px;</string>
+        <string notr="true">font-size: 20px;</string>
        </property>
        <property name="text">
         <string>Connection page</string>
@@ -212,7 +200,7 @@ border: 2px solid #f89c0e;
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>20</width>
          <height>20</height>
         </size>
        </property>
@@ -232,7 +220,10 @@ border: 2px solid #f89c0e;
          <item>
           <widget class="QLineEdit" name="lineEditHostname">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; border-radius: 10; max-width:250px;</string>
+            <string notr="true">border: 2px solid #6c78af; 
+border-radius: 13; 
+max-width:350px; 
+padding: 3px;</string>
            </property>
            <property name="text">
             <string>172.28.100.3</string>
@@ -240,6 +231,43 @@ border: 2px solid #f89c0e;
           </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="labelDatabase">
+           <property name="text">
+            <string>Database :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditDatabase">
+           <property name="styleSheet">
+            <string notr="true">border: 2px solid #6c78af; 
+border-radius: 13; 
+max-width:350px; 
+padding: 3px;</string>
+           </property>
+           <property name="text">
+            <string>kallemand_zoo</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>10</width>
+           <height>15</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -253,7 +281,10 @@ border: 2px solid #f89c0e;
          <item>
           <widget class="QLineEdit" name="lineEditUsername">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; border-radius: 10; max-width:250px;</string>
+            <string notr="true">border: 2px solid #6c78af; 
+border-radius: 13; 
+max-width:350px; 
+padding: 3px;</string>
            </property>
            <property name="text">
             <string>esimon</string>
@@ -274,34 +305,16 @@ border: 2px solid #f89c0e;
          <item>
           <widget class="QLineEdit" name="lineEditPassword">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; border-radius: 10; max-width:250px;</string>
+            <string notr="true">border: 2px solid #6c78af; 
+border-radius: 13; 
+max-width:350px; 
+padding: 3px;</string>
            </property>
            <property name="text">
             <string>elini01</string>
            </property>
            <property name="echoMode">
             <enum>QLineEdit::Password</enum>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QLabel" name="labelDatabase">
-           <property name="text">
-            <string>Database :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEditDatabase">
-           <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; border-radius: 10; max-width:250px;</string>
-           </property>
-           <property name="text">
-            <string>kallemand_zoo</string>
            </property>
           </widget>
          </item>
@@ -316,13 +329,26 @@ border: 2px solid #f89c0e;
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>20</width>
          <height>20</height>
         </size>
        </property>
       </spacer>
      </item>
     </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
