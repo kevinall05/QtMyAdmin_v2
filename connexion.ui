@@ -10,8 +10,16 @@
     <height>424</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Quicksand</family>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Connection</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -43,9 +51,12 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="labelBienvenue">
+      <widget class="QLabel" name="labelTitle">
+       <property name="styleSheet">
+        <string notr="true">font-size: 30px; </string>
+       </property>
        <property name="text">
-        <string>Welcome to QtMyAdmin</string>
+        <string>Welcome to</string>
        </property>
       </widget>
      </item>
@@ -65,6 +76,69 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color: #6c78af; font-size: 30px; font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Qt</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: #f89c0e; font-size: 30px; font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>MyAdmin</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_4">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_7">
      <item>
       <spacer name="horizontalSpacer_13">
@@ -81,6 +155,9 @@
      </item>
      <item>
       <widget class="QLabel" name="labelConnexion">
+       <property name="styleSheet">
+        <string notr="true">font-size: 30px;</string>
+       </property>
        <property name="text">
         <string>Connection page</string>
        </property>
@@ -124,7 +201,11 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEditHostname"/>
+      <widget class="QLineEdit" name="lineEditHostname">
+       <property name="text">
+        <string>172.28.100.3</string>
+       </property>
+      </widget>
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="labelUsername">
@@ -134,7 +215,11 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEditUsername"/>
+      <widget class="QLineEdit" name="lineEditUsername">
+       <property name="text">
+        <string>esimon</string>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="labelPassword">
@@ -144,7 +229,14 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEditPassword"/>
+      <widget class="QLineEdit" name="lineEditPassword">
+       <property name="text">
+        <string>elini01</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="labelDatabase">
@@ -154,7 +246,11 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="lineEditDatabase"/>
+      <widget class="QLineEdit" name="lineEditDatabase">
+       <property name="text">
+        <string>kallemand_zoo</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
