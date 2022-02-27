@@ -14,7 +14,6 @@ void MainWindow::afficherTable()
 
     while(req.next())
     {
-        qDebug()<<"Coucou";
         ui->listWidgetTablesList->addItem(req.value(0).toString());
     }
 }
