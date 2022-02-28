@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    addtable.cpp \
         main.cpp \
         mainwindow.cpp \
     connexion.cpp \
@@ -33,10 +34,12 @@ SOURCES += \
     sqltextrequest.cpp
 
 HEADERS += \
+    addtable.h \
         mainwindow.h \
     connexion.h
 
 FORMS += \
+    addtable.ui \
         mainwindow.ui \
     connexion.ui
 

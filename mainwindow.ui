@@ -12,7 +12,6 @@
   </property>
   <property name="font">
    <font>
-    <family>quicksand</family>
     <pointsize>9</pointsize>
     <strikeout>false</strikeout>
    </font>
@@ -51,9 +50,7 @@ border: 2px solid #f89c0e;
        </size>
       </property>
       <property name="font">
-       <font>
-        <family>quicksand</family>
-       </font>
+       <font/>
       </property>
       <property name="layoutDirection">
        <enum>Qt::LeftToRight</enum>
@@ -90,9 +87,7 @@ border: 2px solid #f89c0e;
            <widget class="QLabel" name="FirstTitle">
             <property name="font">
              <font>
-              <family>quicksand</family>
               <pointsize>-1</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -108,9 +103,7 @@ border: 2px solid #f89c0e;
            <widget class="QLabel" name="SecondTitle">
             <property name="font">
              <font>
-              <family>quicksand</family>
               <pointsize>-1</pointsize>
-              <weight>75</weight>
               <bold>true</bold>
              </font>
             </property>
@@ -186,7 +179,7 @@ max-width: 250px;</string>
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
@@ -469,7 +462,7 @@ max-width: 250px;</string>
      <x>0</x>
      <y>0</y>
      <width>1095</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
