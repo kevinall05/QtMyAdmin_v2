@@ -230,6 +230,9 @@ max-width : 220px;</string>
            <property name="selectionBehavior">
             <enum>QAbstractItemView::SelectRows</enum>
            </property>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
           </widget>
          </item>
          <item>
@@ -596,8 +599,13 @@ max-width : 220px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
+<<<<<<< HEAD
      <width>1103</width>
      <height>20</height>
+=======
+     <width>1095</width>
+     <height>24</height>
+>>>>>>> origin/main
     </rect>
    </property>
   </widget>
