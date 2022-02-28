@@ -1,6 +1,7 @@
 #include <QSqlRecord>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QSqlError>
 
 // insertion de la mainWindow
 #include "mainwindow.h"
@@ -49,9 +50,9 @@ void MainWindow::on_pushButtonSqlExecut_clicked()
     // on exécute la requête
     if(sqlRequest.exec()) {
         // la requête est fonctionnelle
-        ui->statusBar->showMessage("La requête a bien été exécuté",2000);
+        ui->statusBar->showMessage("The SQL request has been executed sucessfully.",2000);
     } else {
         // la requête n'est pas fonctionnelle
-        ui->statusBar->showMessage("Erreur: vérifier la syntaxe",2000);
+        ui->statusBar->showMessage(sqlRequest.lastError().text(),2000);
     }
 }

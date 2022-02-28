@@ -31,7 +31,8 @@ SOURCES += \
     connexion.cpp \
     tablelist.cpp \
     tableinsert.cpp \
-    sqltextrequest.cpp
+    sqltextrequest.cpp \
+    deletesqlentry.cpp
 
 HEADERS += \
     addtable.h \
