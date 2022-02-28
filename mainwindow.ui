@@ -191,7 +191,7 @@ max-width : 200px;</string>
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
@@ -202,6 +202,12 @@ max-width : 200px;</string>
           <widget class="QTableWidget" name="tableWidgetStructure">
            <property name="styleSheet">
             <string notr="true"/>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
            </property>
           </widget>
          </item>
