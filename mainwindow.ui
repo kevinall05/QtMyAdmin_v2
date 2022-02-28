@@ -29,16 +29,14 @@ border-radius: 14;
 padding: 5px 30px;
 font-weight: 700;
 color: #6c78af;
-transition: all 0.3s;
 }
 QPushButton:hover {
 background:#292929;
 color: white;
 border: 2px solid #f89c0e; 
-
 }
 
-QTableWidget, QPlainTextEdit {
+QPlainTextEdit {
 border: 2px solid #6c78af; 
 }</string>
   </property>
@@ -50,6 +48,12 @@ border: 2px solid #6c78af;
        <size>
         <width>0</width>
         <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
        </size>
       </property>
       <property name="font">
@@ -86,6 +90,9 @@ border: 2px solid #6c78af;
       </property>
       <widget class="QWidget" name="verticalLayoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetMaximumSize</enum>
+        </property>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
@@ -164,16 +171,12 @@ border: 2px solid #6c78af;
          </layout>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_8">
-          <item>
-           <widget class="QListWidget" name="listWidgetTablesList">
-            <property name="styleSheet">
-             <string notr="true">border: 2px solid #6c78af; 
-max-width: 250px;</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QListWidget" name="listWidgetTablesList">
+          <property name="styleSheet">
+           <string notr="true">border: 2px solid #6c78af; 
+max-width : 200px;</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -434,6 +437,19 @@ max-width: 250px;</string>
           <widget class="QTableWidget" name="tableWidgetRequestInsert"/>
          </item>
          <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
             <spacer name="horizontalSpacer_8">
@@ -470,12 +486,22 @@ max-width: 250px;</string>
          <item>
           <widget class="QLabel" name="label_7">
            <property name="text">
-            <string>Delete an entry here :</string>
+            <string>Select an entry to delete :</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QTableWidget" name="tableWidgetDeleteEntry"/>
+          <widget class="QTableWidget" name="tableWidgetDeleteEntry">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideRight</enum>
+           </property>
+          </widget>
          </item>
          <item>
           <spacer name="verticalSpacer_2">
