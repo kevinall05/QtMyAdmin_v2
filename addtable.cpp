@@ -3,7 +3,7 @@
 #include "ui_addtable.h"
 #include <QString>
 
-AddTable::AddTable(QWidget *parent) :
+AddTable::AddTable(int theColumnNumber,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddTable)
 {
@@ -17,4 +17,9 @@ AddTable::AddTable(QWidget *parent) :
 AddTable::~AddTable()
 {
     delete ui;
+}
+
+void AddTable::setColumnNumber(int theColumnNumber)
+{
+    columnNumber = theColumnNumber;
 }

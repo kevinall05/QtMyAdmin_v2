@@ -6,13 +6,8 @@
 
 void MainWindow::on_pushButtonAddTable_clicked()
 {
-    //Initialisation du tableau
-    ui->tableWidgetSelect->clear();
-    ui->tableWidgetSelect->setRowCount(0);
-    ui->tableWidgetSelect->setColumnCount(0);
-    ui->tableWidgetSelect->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-
-    AddTable newTable;
+    AddTable newTable(getColumnNumber());
+    newTable.show();
     qDebug()<<"ici";
 }
 
