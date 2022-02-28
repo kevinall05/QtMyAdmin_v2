@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1095</width>
+    <width>1103</width>
     <height>700</height>
    </rect>
   </property>
@@ -38,6 +38,12 @@ border: 2px solid #f89c0e;
 
 QPlainTextEdit {
 border: 2px solid #6c78af; 
+color: blue;
+font-size: 13px;
+}
+
+QLabel {
+font-size: 16px;
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -54,6 +60,12 @@ border: 2px solid #6c78af;
        <size>
         <width>16777215</width>
         <height>16777215</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
        </size>
       </property>
       <property name="font">
@@ -76,6 +88,9 @@ border: 2px solid #6c78af;
       <property name="frameShadow">
        <enum>QFrame::Plain</enum>
       </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -89,9 +104,9 @@ border: 2px solid #6c78af;
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="verticalLayoutWidget">
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0">
         <property name="sizeConstraint">
-         <enum>QLayout::SetMaximumSize</enum>
+         <enum>QLayout::SetDefaultConstraint</enum>
         </property>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout">
@@ -106,7 +121,7 @@ border: 2px solid #6c78af;
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">color: #6c78af; font-size: 30px; font-weight: bold;</string>
+             <string notr="true">color: #6c78af; font-size: 45px; font-weight: bold;</string>
             </property>
             <property name="text">
              <string>Qt</string>
@@ -174,13 +189,19 @@ border: 2px solid #6c78af;
          <widget class="QListWidget" name="listWidgetTablesList">
           <property name="styleSheet">
            <string notr="true">border: 2px solid #6c78af; 
-max-width : 200px;</string>
+max-width : 220px;</string>
           </property>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QTabWidget" name="tabWidgetSections">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -191,7 +212,7 @@ max-width : 200px;</string>
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
@@ -490,11 +511,28 @@ max-width : 200px;</string>
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_6">
          <item>
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Select an entry to delete :</string>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Select an entry to delete :</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
          <item>
           <widget class="QTableWidget" name="tableWidgetDeleteEntry">
@@ -558,7 +596,7 @@ max-width : 200px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1095</width>
+     <width>1103</width>
      <height>20</height>
     </rect>
    </property>
