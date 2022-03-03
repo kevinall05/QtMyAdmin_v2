@@ -6,6 +6,7 @@
 #include <QCheckBox>
 #include <QSqlQuery>
 #include <QLineEdit>
+#include <QDebug>
 
 AddTable::AddTable(int theColumnNumber, QString theTableName, QWidget *parent) :
     QDialog(parent),
