@@ -13,6 +13,34 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font-family: quicksand;
+font-size: 15px; 
+}
+
+QPushButton {
+border: 2px solid #6c78af; 
+border-radius: 15; 
+padding: 5px 30px;
+font-weight: 700;
+color: #6c78af;
+}
+QPushButton:hover {
+background:#292929;
+color: white;
+border: 2px solid #f89c0e; 
+}
+
+QPlainTextEdit {
+border: 2px solid #6c78af; 
+color: blue;
+}
+
+QLabel {
+font-size: 16px;
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTableWidget" name="tableWidgetAddTable">
