@@ -12,13 +12,16 @@ class AddTable : public QDialog
     Q_OBJECT
 
 public:
-    explicit AddTable(int theColumnNumber, QWidget *parent = nullptr);
+    explicit AddTable(int theColumnNumber, QString theTableName, QWidget *parent = nullptr);
     ~AddTable();
+
+private slots:
+    void on_pushButtonCreateTable_clicked();
 
 private:
     Ui::AddTable *ui;
-    void setColumnNumber(int theColumnNumber);
-    int columnNumber;
+    QString tableName;
+    int columnCount;
 };
 
 #endif // ADDTABLE_H

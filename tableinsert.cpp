@@ -6,12 +6,6 @@
 
 void MainWindow::on_pushButtonAddTable_clicked()
 {
-    AddTable newTable(getColumnNumber());
-    newTable.show();
-    qDebug()<<"ici";
-}
-
-int MainWindow::getColumnNumber()
-{
-    return ui->spinBoxColumnNumber->value();
+    AddTable newTable(ui->spinBoxColumnNumber->value(), ui->lineEditTableName->text());
+    newTable.exec();
 }
