@@ -33,7 +33,6 @@ void MainWindow::on_listWidgetTablesList_itemClicked(QListWidgetItem *item)
 
     // requête SQL
      QString txtReq= "SELECT * FROM "+ui->listWidgetTablesList->currentItem()->text();
-     QString txtReqName= "SELECT * FROM "+ui->listWidgetTablesList->currentItem()->text();
      QSqlQuery req(txtReq);
      qDebug()<<txtReq;
 
@@ -70,10 +69,42 @@ void MainWindow::on_listWidgetTablesList_itemClicked(QListWidgetItem *item)
              ui->tableWidgetStructure->setItem(compteur,counter,new QTableWidgetItem(req.value(counter).toString()));
              ui->tableWidgetDeleteEntry->setItem(compteur,counter,new QTableWidgetItem(req.value(counter).toString()));
              ui->tableWidgetRequestInsert->setVerticalHeaderItem(counter,new QTableWidgetItem(recordRequest.fieldName(counter)));
+             QLineEdit* valueLineEdit = new QLineEdit();
+             ui->tableWidgetRequestInsert->setCellWidget(counter,0,valueLineEdit);
          }
          // on ajoute une ligne
          compteur+=1;
-
  }
-
 }
+
+
+void MainWindow::on_pushButtonInsertExecut_clicked()
+{
+    QString txtReqInsert= "SELECT * FROM "+ui->listWidgetTablesList->currentItem()->text();
+    QSqlQuery req(txtReqInsert);
+    qDebug()<<txtReqInsert;
+    QSqlRecord recordRequest = req.record();
+    int nbChamp=recordRequest.count();
+    qDebug()<<nbChamp;
+
+    QString resultat;
+
+    for(int i = 0; i < nbChamp; i++)
+    {
+        QString test=((QLineEdit *)(ui->tableWidgetRequestInsert->cellWidget(i,0)))->text();
+        if(test.isEmpty())
+        {
+           test="NULL";
+        }
+        resultat+="  '"+test+"'";
+    }
+    QStringList listeElement=resultat.split("  ",QString::SkipEmptyParts);
+    qDebug()<<listeElement;
+
+    QString txtRequet="INSERT INTO "+ui->listWidgetTablesList->currentItem()->text()+" VALUES (";
+    txtRequet+=listeElement.join(",");
+    txtRequet+=");";
+    qDebug()<<txtRequet;
+    QSqlQuery query(txtRequet);
+}
+
