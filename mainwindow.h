@@ -21,11 +21,15 @@ private slots:
     void on_pushButtonSqlExecut_clicked();
     void on_listWidgetTablesList_itemClicked(QListWidgetItem *item);
 
-    void on_pushButton_clicked();
-
+    void on_pushButtonChangeDatabase_clicked();
     void on_pushButtonDeleteEntry_clicked();
     void on_pushButtonInsertExecut_clicked();
 
+    void on_action_Close_triggered();
+    void on_actionChange_Database_triggered();
+
+
+    void on_pushButtonDeleteTable_clicked();
 
 private:
     Ui::MainWindow *ui;
