@@ -126,16 +126,14 @@ void AddTable::on_pushButtonCreateTable_clicked()
 
     request += ")";
 
-    QSqlQuery addTableRequest(request);
+    QSqlQuery addTableRequest;
 
-    addTableRequest.exec();
-
-    if(addTableRequest.numRowsAffected())
-    {
+    if(addTableRequest.exec(request)) {
+        close();
+    } else{
+        ui->labelError->setWordWrap(true);
+        ui->labelError->setText(addTableRequest.lastError().text());
         ui->labelError->setVisible(true);
     }
 
-
 }
-
-
