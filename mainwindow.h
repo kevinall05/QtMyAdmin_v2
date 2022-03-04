@@ -19,6 +19,7 @@ public:
 private slots:
     void on_pushButtonAddTable_clicked();
     void on_pushButtonSqlExecut_clicked();
+    void on_pushButtonInsertExecut_clicked();
     void on_listWidgetTablesList_itemClicked(QListWidgetItem *item);
 
 private:
