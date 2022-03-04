@@ -22,6 +22,8 @@ private slots:
     void on_pushButtonInsertExecut_clicked();
     void on_listWidgetTablesList_itemClicked(QListWidgetItem *item);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     void afficherTable();

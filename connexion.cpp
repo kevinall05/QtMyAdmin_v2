@@ -1,5 +1,7 @@
 #include "connexion.h"
 #include "ui_connexion.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 #include <QSqlDatabase>
 #include <QDebug>
 
@@ -13,6 +15,11 @@ Connexion::Connexion(QWidget *parent) :
 Connexion::~Connexion()
 {
     delete ui;
+}
+
+void Connexion::masquerLabelTitle()
+{
+    ui->labelTitle->setVisible(0);
 }
 
 void Connexion::on_pushButton_clicked()
@@ -29,8 +36,11 @@ void Connexion::on_pushButton_clicked()
     qDebug()<<ok;
 
     if(ok==true) {
+        qDebug()<<"accept";
+
         // on renvoie à la MainWindow que l'utilisateur est connecté
         accept();
+
     } else {
 }
 }
