@@ -5,6 +5,7 @@
 #include <QComboBox>
 #include <QCheckBox>
 #include <QSqlQuery>
+#include <QSqlError>
 #include <QLineEdit>
 #include <QDebug>
 
@@ -13,6 +14,8 @@ AddTable::AddTable(int theColumnNumber, QString theTableName, QWidget *parent) :
     ui(new Ui::AddTable)
 {
     ui->setupUi(this);
+
+    ui->labelError->setVisible(false);
 
     tableName = theTableName;
     columnCount = theColumnNumber;
@@ -123,7 +126,14 @@ void AddTable::on_pushButtonCreateTable_clicked()
 
     request += ")";
 
-    qDebug()<<request;
+    QSqlQuery addTableRequest;
+
+    if(addTableRequest.exec(request)) {
+        close();
+    } else{
+        ui->labelError->setWordWrap(true);
+        ui->labelError->setText(addTableRequest.lastError().text());
+        ui->labelError->setVisible(true);
+    }
+
 }
-
-

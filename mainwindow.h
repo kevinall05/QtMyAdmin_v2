@@ -23,6 +23,10 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButtonDeleteEntry_clicked();
+    void on_pushButtonInsertExecut_clicked();
+
+
 private:
     Ui::MainWindow *ui;
     void afficherTable();
