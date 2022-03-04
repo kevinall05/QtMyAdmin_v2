@@ -4,7 +4,7 @@
 #include "tableinsert.cpp"
 #include "tablelist.cpp"
 #include "changedatabase.cpp"
-
+#include "deletesqlentry.cpp"
 
 
 MainWindow::MainWindow(QWidget *parent) :
