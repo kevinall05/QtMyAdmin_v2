@@ -6,6 +6,7 @@
 
 int main(int argc, char *argv[])
 {
+    qDebug()<<"MAIN";
     QApplication a(argc, argv);
 
     // si l'utilisateur est connecté, on ouvre la MainWindow

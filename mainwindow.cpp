@@ -3,6 +3,8 @@
 #include "sqltextrequest.cpp"
 #include "tableinsert.cpp"
 #include "tablelist.cpp"
+#include "changedatabase.cpp"
+
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -17,3 +19,4 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
