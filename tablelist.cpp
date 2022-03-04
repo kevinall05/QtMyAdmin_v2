@@ -21,6 +21,9 @@ void MainWindow::afficherTable()
 
 void MainWindow::on_listWidgetTablesList_itemClicked(QListWidgetItem *item)
 {
+    // on active le bouton pour supprimer le bouton
+    ui->pushButtonDeleteTable->setEnabled(1);
+
     //Initialisation du tableau
     ui->tableWidgetStructure->setRowCount(0);
     ui->tableWidgetStructure->setColumnCount(0);
@@ -30,6 +33,8 @@ void MainWindow::on_listWidgetTablesList_itemClicked(QListWidgetItem *item)
     ui->tableWidgetRequestInsert->setColumnCount(0);
     ui->tableWidgetRequestInsert->verticalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->tableWidgetRequestInsert->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+
+    ui->tableWidgetDeleteEntry->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     // requête SQL
      QString txtReq= "SELECT * FROM "+ui->listWidgetTablesList->currentItem()->text();

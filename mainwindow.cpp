@@ -14,6 +14,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     afficherTable();
+
+    // on désactive le bouton au démarrage de l'appli
+    ui->pushButtonDeleteTable->setEnabled(0);
 }
 
 MainWindow::~MainWindow()

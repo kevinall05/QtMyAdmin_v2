@@ -17,6 +17,11 @@ Connexion::~Connexion()
     delete ui;
 }
 
+void Connexion::reconnexionLabelTitle()
+{
+    ui->labelTitle->setVisible(0);
+}
+
 void Connexion::on_pushButton_clicked()
 {
     // connexion à la base de données
@@ -40,8 +45,7 @@ void Connexion::on_pushButton_clicked()
 }
 }
 
-void Connexion::reconnexionLabelTitle()
+void Connexion::on_pushButtonCancel_clicked()
 {
-    ui->labelTitle->setText("Change your database");
-    ui->labelConnexion->setText("Reconnection page");
+    close();
 }
