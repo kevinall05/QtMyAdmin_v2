@@ -37,9 +37,11 @@ void MainWindow::on_pushButtonDeleteEntry_clicked()
     // on exécute la requête
     if(deleteRequest.exec()) {
         // la requête est fonctionnelle
-        ui->statusBar->showMessage("The SQL request has been executed sucessfully.",2000);
+        ui->statusBar->showMessage("The SQL request has been executed sucessfully.",8000);
+        ui->statusBar->setStyleSheet("color: #1d912d;");
     } else {
         // la requête n'est pas fonctionnelle
-        ui->statusBar->showMessage(deleteRequest.lastError().text(),2000);
+        ui->statusBar->showMessage(deleteRequest.lastError().text(),8000);
+        ui->statusBar->setStyleSheet("color: #a62929;");
     }
 }

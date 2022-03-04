@@ -14,9 +14,11 @@ void MainWindow::on_pushButtonDeleteTable_clicked()
     // on vérifie si la requête s'exécute
     if(deleteTable.exec(txtDeleteTable)) {
         // la requête est fonctionnelle
-        ui->statusBar->showMessage(ui->listWidgetTablesList->currentItem()->text()+" has been deleted sucessfully.",2000);
+        ui->statusBar->showMessage(ui->listWidgetTablesList->currentItem()->text()+" has been deleted sucessfully.",8000);
+        ui->statusBar->setStyleSheet("color: #1d912d;");
     } else {
         // la requête n'est pas fonctionnelle
-        ui->statusBar->showMessage(deleteTable.lastError().text(),2000);
+        ui->statusBar->showMessage(deleteTable.lastError().text(),8000);
+        ui->statusBar->setStyleSheet("color: #a62929;");
     }
 }
