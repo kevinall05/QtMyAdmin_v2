@@ -10,7 +10,7 @@
 #include "connexion.h"
 #include "ui_connexion.h"
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_pushButtonChangeDatabase_clicked()
 {
     qDebug()<<"void MainWindow::on_pushButton_clicked()";
 

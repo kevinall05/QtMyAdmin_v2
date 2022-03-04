@@ -46,6 +46,10 @@ color: blue;
 
 QLabel {
 font-size: 16px;
+}
+
+QStatusBar {
+color: #343c63;
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -110,7 +114,7 @@ font-size: 16px;
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="verticalLayoutWidget">
-       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0">
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0">
         <property name="sizeConstraint">
          <enum>QLayout::SetDefaultConstraint</enum>
         </property>
@@ -195,12 +199,30 @@ font-size: 16px;
          <widget class="QListWidget" name="listWidgetTablesList">
           <property name="styleSheet">
            <string notr="true">border: 2px solid #6c78af; 
-max-width : 230px;</string>
+max-width : 240px;</string>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton">
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <item>
+           <widget class="QLabel" name="label_9">
+            <property name="text">
+             <string>Delete the table :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonDeleteTable">
+            <property name="text">
+             <string>Delete</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonChangeDatabase">
           <property name="styleSheet">
            <string notr="true"/>
           </property>
@@ -300,6 +322,9 @@ max-width : 230px;</string>
            </item>
            <item>
             <widget class="QSpinBox" name="spinBoxColumnNumber">
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
              <property name="minimum">
               <number>1</number>
              </property>
@@ -629,6 +654,18 @@ max-width : 230px;</string>
      <height>24</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QMenu" name="menu_Close">
+    <property name="title">
+     <string>&amp;Menu</string>
+    </property>
+    <addaction name="action_Close"/>
+    <addaction name="separator"/>
+    <addaction name="actionChange_Database"/>
+   </widget>
+   <addaction name="menu_Close"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <property name="styleSheet">
@@ -642,6 +679,21 @@ max-width : 230px;</string>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Close">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+  </action>
+  <action name="actionChange_Database">
+   <property name="text">
+    <string>Change &amp;Database</string>
+   </property>
+  </action>
+  <action name="action_Reduce">
+   <property name="text">
+    <string>&amp;Reduce</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

@@ -33,7 +33,8 @@ SOURCES += \
     tableinsert.cpp \
     sqltextrequest.cpp \
     deletesqlentry.cpp \
-    changedatabase.cpp
+    changedatabase.cpp \
+    deletetable.cpp
 
 HEADERS += \
     addtable.h \
