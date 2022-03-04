@@ -17,7 +17,7 @@ void MainWindow::on_pushButton_clicked()
 
 
     Connexion fenConnexion(this);
-    fenConnexion.masquerLabelTitle();
+    fenConnexion.reconnexionLabelTitle();
     fenConnexion.exec();
 
     //Initialisation de tous les tableaux de l'application

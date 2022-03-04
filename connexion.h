@@ -15,7 +15,7 @@ public:
     explicit Connexion(QWidget *parent = nullptr);
     ~Connexion();
 
-    void masquerLabelTitle();
+    void reconnexionLabelTitle();
 
 private slots:
     void on_pushButton_clicked();
