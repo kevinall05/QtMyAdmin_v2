@@ -29,7 +29,7 @@ private slots:
     void on_actionChange_Database_triggered();
 
 
-
+    void on_pushButtonDeleteTable_clicked();
 
 private:
     Ui::MainWindow *ui;

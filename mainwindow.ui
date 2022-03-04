@@ -250,7 +250,7 @@ max-width : 240px;</string>
         <string notr="true"/>
        </property>
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="structure">
         <attribute name="title">
