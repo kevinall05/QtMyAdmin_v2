@@ -6,6 +6,6 @@
 
 void MainWindow::on_pushButtonAddTable_clicked()
 {
-    AddTable newTable(ui->spinBoxColumnNumber->value(), ui->lineEditTableName->text());
+    AddTable newTable(ui->spinBoxColumnNumber->value(), ui->lineEditTableName->text(),this);
     newTable.exec();
 }

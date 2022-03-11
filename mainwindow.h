@@ -15,7 +15,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+void afficherTable();
 private slots:
     void on_pushButtonAddTable_clicked();
     void on_pushButtonSqlExecut_clicked();
@@ -33,7 +33,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    void afficherTable();
+
     int getColumnNumber();
 };
 
