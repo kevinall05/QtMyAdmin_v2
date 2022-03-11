@@ -103,7 +103,7 @@ void MainWindow::on_pushButtonInsertExecut_clicked()
         }
         resultat+="  '"+test+"'";
     }
-    QStringList listeElement=resultat.split("  ",QString::SkipEmptyParts);
+    QStringList listeElement=resultat.split("  ");
     qDebug()<<listeElement;
 
     QString txtRequet="INSERT INTO "+ui->listWidgetTablesList->currentItem()->text()+" VALUES (";
