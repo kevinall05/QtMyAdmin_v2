@@ -7,20 +7,24 @@
     <x>0</x>
     <y>0</y>
     <width>357</width>
-    <height>412</height>
+    <height>427</height>
    </rect>
   </property>
   <property name="font">
    <font>
-    <family>Quicksand</family>
-    <pointsize>11</pointsize>
+    <pointsize>-1</pointsize>
    </font>
   </property>
   <property name="windowTitle">
-   <string>Connection</string>
+   <string>Connection - QtMyAdmin</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton {
+   <string notr="true">* {
+font-family: Quicksand;
+font-size: 15px; 
+}
+
+QPushButton {
 border: 2px solid #6c78af; 
 border-radius: 15; 
 background: #fff;
@@ -32,6 +36,13 @@ QPushButton:hover {
 background:#292929;
 color: white;
 border: 2px solid #f89c0e; 
+}
+
+QLineEdit {
+border: 2px solid #6c78af; 
+border-radius: 13; 
+max-width:350px; 
+padding: 3px;
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -192,6 +203,46 @@ border: 2px solid #f89c0e;
     </spacer>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelConnectionError">
+       <property name="styleSheet">
+        <string notr="true">color: red; </string>
+       </property>
+       <property name="text">
+        <string>-- incorrect information --</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_10">
      <item>
       <spacer name="horizontalSpacer_4">
@@ -220,10 +271,7 @@ border: 2px solid #f89c0e;
          <item>
           <widget class="QLineEdit" name="lineEditHostname">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; 
-border-radius: 13; 
-max-width:350px; 
-padding: 3px;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>172.28.100.3</string>
@@ -244,10 +292,7 @@ padding: 3px;</string>
          <item>
           <widget class="QLineEdit" name="lineEditDatabase">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; 
-border-radius: 13; 
-max-width:350px; 
-padding: 3px;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>kallemand_zoo</string>
@@ -281,10 +326,7 @@ padding: 3px;</string>
          <item>
           <widget class="QLineEdit" name="lineEditUsername">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; 
-border-radius: 13; 
-max-width:350px; 
-padding: 3px;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>esimon</string>
@@ -305,10 +347,7 @@ padding: 3px;</string>
          <item>
           <widget class="QLineEdit" name="lineEditPassword">
            <property name="styleSheet">
-            <string notr="true">border: 2px solid #6c78af; 
-border-radius: 13; 
-max-width:350px; 
-padding: 3px;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>elini01</string>
