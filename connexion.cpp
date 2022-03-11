@@ -10,6 +10,7 @@ Connexion::Connexion(QWidget *parent) :
     ui(new Ui::Connexion)
 {
     ui->setupUi(this);
+    ui->labelConnectionError->setVisible(0);
 }
 
 Connexion::~Connexion()
@@ -31,6 +32,26 @@ void Connexion::on_pushButton_clicked()
     maBase.setUserName(ui->lineEditUsername->text());
     maBase.setPassword(ui->lineEditPassword->text());
 
+
+    if(ui->lineEditHostname->text().isEmpty()){
+        ui->lineEditHostname->setStyleSheet("background: #ed6b6b; color: white; border: 2px solid #a13838; ");
+        ui->lineEditHostname->setPlaceholderText("Enter text !");
+    }
+    if(ui->lineEditDatabase->text().isEmpty()){
+        ui->lineEditDatabase->setStyleSheet("background: #ed6b6b; color: white; border: 2px solid #a13838; ");
+        ui->lineEditDatabase->setPlaceholderText("Enter text !");
+    }
+    if(ui->lineEditPassword->text().isEmpty()){
+        ui->lineEditPassword->setStyleSheet("background: #ed6b6b; color: white; border: 2px solid #a13838; ");
+        ui->lineEditPassword->setPlaceholderText("Enter text !");
+    }
+    if(ui->lineEditUsername->text().isEmpty()){
+        ui->lineEditUsername->setStyleSheet("background: #ed6b6b; color: white; border: 2px solid #a13838; ");
+        ui->lineEditUsername->setPlaceholderText("Enter text !");
+    }
+
+
+
     // ouverture de la base
     bool ok = maBase.open();
     qDebug()<<ok;
@@ -42,6 +63,8 @@ void Connexion::on_pushButton_clicked()
         accept();
 
     } else {
+
+        ui->labelConnectionError->setVisible(1);
 }
 }
 

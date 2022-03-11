@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Add a table - QtMyAdmin</string>
   </property>
   <property name="styleSheet">
    <string notr="true">*{
@@ -44,6 +44,9 @@ font-size: 16px;
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTableWidget" name="tableWidgetAddTable">
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
      <column>
       <property name="text">
        <string>Name</string>
