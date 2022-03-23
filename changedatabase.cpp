@@ -14,8 +14,6 @@ void MainWindow::on_pushButtonChangeDatabase_clicked()
 {
     qDebug()<<"void MainWindow::on_pushButton_clicked()";
 
-
-
     Connexion fenConnexion(this);
     fenConnexion.reconnexionLabelTitle();
     fenConnexion.exec();
@@ -23,6 +21,7 @@ void MainWindow::on_pushButtonChangeDatabase_clicked()
     //Initialisation de tous les tableaux de l'application
     ui->listWidgetTablesList->clear();
 
+    /*
     //Initialisation du tableau tableWidgetSelect
     ui->tableWidgetSelect->clear();
     ui->tableWidgetSelect->setRowCount(0);
@@ -41,11 +40,12 @@ void MainWindow::on_pushButtonChangeDatabase_clicked()
     ui->tableWidgetDeleteEntry->setColumnCount(0);
     ui->tableWidgetDeleteEntry->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
+
     //Initialisation du tableau tableWidgetRequestInsert
     ui->tableWidgetRequestInsert->clear();
     ui->tableWidgetRequestInsert->setRowCount(0);
     ui->tableWidgetRequestInsert->setColumnCount(0);
-    ui->tableWidgetRequestInsert->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->tableWidgetRequestInsert->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);*/
 
     afficherTable();
 }

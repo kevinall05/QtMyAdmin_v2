@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QListWidgetItem>
+#include <QSqlTableModel>
 
 namespace Ui {
 class MainWindow;
@@ -15,7 +16,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-void afficherTable();
+
 private slots:
     void on_pushButtonAddTable_clicked();
     void on_pushButtonSqlExecut_clicked();
@@ -31,10 +32,20 @@ private slots:
 
     void on_pushButtonDeleteTable_clicked();
 
+    void on_pushButtonExportDatabase_clicked();
+
+    void on_pushButtonExportTable_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButtonImportTable_clicked();
+
 private:
     Ui::MainWindow *ui;
-
+    void afficherTable();
     int getColumnNumber();
+    QSqlTableModel* modelTable;
+    QSqlQueryModel* modelQuery;
 };
 
 #endif // MAINWINDOW_H

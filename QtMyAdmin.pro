@@ -26,13 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
     addtable.cpp \
+    exportdatabase.cpp \
         main.cpp \
         mainwindow.cpp \
     connexion.cpp \
     tablelist.cpp \
     tableinsert.cpp \
     sqltextrequest.cpp \
-    deletesqlentry.cpp \
     changedatabase.cpp \
     deletetable.cpp
 

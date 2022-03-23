@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
     Connexion seConnecter;
     if(seConnecter.exec()==QDialog::Accepted)
     {
-        qDebug()<<"ouverture de la MainWindow";
         MainWindow w;
         w.show();
         return a.exec();

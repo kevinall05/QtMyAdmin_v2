@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'connexion.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.3
+** Created by: Qt User Interface Compiler version 6.2.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -40,6 +41,10 @@ public:
     QLabel *labelConnexion;
     QSpacerItem *horizontalSpacer_14;
     QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_11;
+    QSpacerItem *horizontalSpacer_7;
+    QLabel *label_3;
+    QComboBox *comboBoxTypeDatabase;
     QHBoxLayout *horizontalLayout_9;
     QSpacerItem *horizontalSpacer_6;
     QLabel *labelConnectionError;
@@ -53,6 +58,7 @@ public:
     QHBoxLayout *horizontalLayout_8;
     QLabel *labelDatabase;
     QLineEdit *lineEditDatabase;
+    QPushButton *pushButtonBrowse;
     QSpacerItem *verticalSpacer_5;
     QHBoxLayout *horizontalLayout_4;
     QLabel *labelUsername;
@@ -72,11 +78,11 @@ public:
     void setupUi(QDialog *Connexion)
     {
         if (Connexion->objectName().isEmpty())
-            Connexion->setObjectName(QStringLiteral("Connexion"));
-        Connexion->resize(357, 427);
+            Connexion->setObjectName(QString::fromUtf8("Connexion"));
+        Connexion->resize(357, 433);
         QFont font;
         Connexion->setFont(font);
-        Connexion->setStyleSheet(QLatin1String("* {\n"
+        Connexion->setStyleSheet(QString::fromUtf8("* {\n"
 "font-family: Quicksand;\n"
 "font-size: 15px; \n"
 "}\n"
@@ -102,16 +108,16 @@ public:
 "padding: 3px;\n"
 "}"));
         verticalLayout_2 = new QVBoxLayout(Connexion);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         horizontalLayout_6 = new QHBoxLayout();
-        horizontalLayout_6->setObjectName(QStringLiteral("horizontalLayout_6"));
+        horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_11);
 
         labelTitle = new QLabel(Connexion);
-        labelTitle->setObjectName(QStringLiteral("labelTitle"));
-        labelTitle->setStyleSheet(QStringLiteral("font-size: 30px; "));
+        labelTitle->setObjectName(QString::fromUtf8("labelTitle"));
+        labelTitle->setStyleSheet(QString::fromUtf8("font-size: 30px; "));
 
         horizontalLayout_6->addWidget(labelTitle);
 
@@ -123,20 +129,20 @@ public:
         verticalLayout_2->addLayout(horizontalLayout_6);
 
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
         label = new QLabel(Connexion);
-        label->setObjectName(QStringLiteral("label"));
-        label->setStyleSheet(QStringLiteral("color: #6c78af; font-size: 30px; font-weight: bold;"));
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setStyleSheet(QString::fromUtf8("color: #6c78af; font-size: 30px; font-weight: bold;"));
 
         horizontalLayout->addWidget(label);
 
         label_2 = new QLabel(Connexion);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setStyleSheet(QStringLiteral("color: #f89c0e; font-size: 30px; font-weight: bold;"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
+        label_2->setStyleSheet(QString::fromUtf8("color: #f89c0e; font-size: 30px; font-weight: bold;"));
 
         horizontalLayout->addWidget(label_2);
 
@@ -152,14 +158,14 @@ public:
         verticalLayout_2->addItem(verticalSpacer_4);
 
         horizontalLayout_7 = new QHBoxLayout();
-        horizontalLayout_7->setObjectName(QStringLiteral("horizontalLayout_7"));
+        horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_7->addItem(horizontalSpacer_13);
 
         labelConnexion = new QLabel(Connexion);
-        labelConnexion->setObjectName(QStringLiteral("labelConnexion"));
-        labelConnexion->setStyleSheet(QStringLiteral("font-size: 20px;"));
+        labelConnexion->setObjectName(QString::fromUtf8("labelConnexion"));
+        labelConnexion->setStyleSheet(QString::fromUtf8("font-size: 20px;"));
 
         horizontalLayout_7->addWidget(labelConnexion);
 
@@ -174,15 +180,34 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer);
 
+        horizontalLayout_11 = new QHBoxLayout();
+        horizontalLayout_11->setObjectName(QString::fromUtf8("horizontalLayout_11"));
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_11->addItem(horizontalSpacer_7);
+
+        label_3 = new QLabel(Connexion);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+
+        horizontalLayout_11->addWidget(label_3);
+
+        comboBoxTypeDatabase = new QComboBox(Connexion);
+        comboBoxTypeDatabase->setObjectName(QString::fromUtf8("comboBoxTypeDatabase"));
+
+        horizontalLayout_11->addWidget(comboBoxTypeDatabase);
+
+
+        verticalLayout_2->addLayout(horizontalLayout_11);
+
         horizontalLayout_9 = new QHBoxLayout();
-        horizontalLayout_9->setObjectName(QStringLiteral("horizontalLayout_9"));
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
         horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_9->addItem(horizontalSpacer_6);
 
         labelConnectionError = new QLabel(Connexion);
-        labelConnectionError->setObjectName(QStringLiteral("labelConnectionError"));
-        labelConnectionError->setStyleSheet(QStringLiteral("color: red; "));
+        labelConnectionError->setObjectName(QString::fromUtf8("labelConnectionError"));
+        labelConnectionError->setStyleSheet(QString::fromUtf8("color: red; "));
 
         horizontalLayout_9->addWidget(labelConnectionError);
 
@@ -194,23 +219,23 @@ public:
         verticalLayout_2->addLayout(horizontalLayout_9);
 
         horizontalLayout_10 = new QHBoxLayout();
-        horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
+        horizontalLayout_10->setObjectName(QString::fromUtf8("horizontalLayout_10"));
         horizontalSpacer_4 = new QSpacerItem(20, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_10->addItem(horizontalSpacer_4);
 
         verticalLayout = new QVBoxLayout();
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         labelHostname = new QLabel(Connexion);
-        labelHostname->setObjectName(QStringLiteral("labelHostname"));
+        labelHostname->setObjectName(QString::fromUtf8("labelHostname"));
 
         horizontalLayout_3->addWidget(labelHostname);
 
         lineEditHostname = new QLineEdit(Connexion);
-        lineEditHostname->setObjectName(QStringLiteral("lineEditHostname"));
-        lineEditHostname->setStyleSheet(QStringLiteral(""));
+        lineEditHostname->setObjectName(QString::fromUtf8("lineEditHostname"));
+        lineEditHostname->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_3->addWidget(lineEditHostname);
 
@@ -218,17 +243,23 @@ public:
         verticalLayout->addLayout(horizontalLayout_3);
 
         horizontalLayout_8 = new QHBoxLayout();
-        horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
+        horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         labelDatabase = new QLabel(Connexion);
-        labelDatabase->setObjectName(QStringLiteral("labelDatabase"));
+        labelDatabase->setObjectName(QString::fromUtf8("labelDatabase"));
 
         horizontalLayout_8->addWidget(labelDatabase);
 
         lineEditDatabase = new QLineEdit(Connexion);
-        lineEditDatabase->setObjectName(QStringLiteral("lineEditDatabase"));
-        lineEditDatabase->setStyleSheet(QStringLiteral(""));
+        lineEditDatabase->setObjectName(QString::fromUtf8("lineEditDatabase"));
+        lineEditDatabase->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_8->addWidget(lineEditDatabase);
+
+        pushButtonBrowse = new QPushButton(Connexion);
+        pushButtonBrowse->setObjectName(QString::fromUtf8("pushButtonBrowse"));
+        pushButtonBrowse->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_8->addWidget(pushButtonBrowse);
 
 
         verticalLayout->addLayout(horizontalLayout_8);
@@ -238,15 +269,15 @@ public:
         verticalLayout->addItem(verticalSpacer_5);
 
         horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         labelUsername = new QLabel(Connexion);
-        labelUsername->setObjectName(QStringLiteral("labelUsername"));
+        labelUsername->setObjectName(QString::fromUtf8("labelUsername"));
 
         horizontalLayout_4->addWidget(labelUsername);
 
         lineEditUsername = new QLineEdit(Connexion);
-        lineEditUsername->setObjectName(QStringLiteral("lineEditUsername"));
-        lineEditUsername->setStyleSheet(QStringLiteral(""));
+        lineEditUsername->setObjectName(QString::fromUtf8("lineEditUsername"));
+        lineEditUsername->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_4->addWidget(lineEditUsername);
 
@@ -254,15 +285,15 @@ public:
         verticalLayout->addLayout(horizontalLayout_4);
 
         horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
         labelPassword = new QLabel(Connexion);
-        labelPassword->setObjectName(QStringLiteral("labelPassword"));
+        labelPassword->setObjectName(QString::fromUtf8("labelPassword"));
 
         horizontalLayout_5->addWidget(labelPassword);
 
         lineEditPassword = new QLineEdit(Connexion);
-        lineEditPassword->setObjectName(QStringLiteral("lineEditPassword"));
-        lineEditPassword->setStyleSheet(QStringLiteral(""));
+        lineEditPassword->setObjectName(QString::fromUtf8("lineEditPassword"));
+        lineEditPassword->setStyleSheet(QString::fromUtf8(""));
         lineEditPassword->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_5->addWidget(lineEditPassword);
@@ -285,21 +316,21 @@ public:
         verticalLayout_2->addItem(verticalSpacer_3);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_2->addItem(horizontalSpacer_9);
 
         pushButtonCancel = new QPushButton(Connexion);
-        pushButtonCancel->setObjectName(QStringLiteral("pushButtonCancel"));
-        pushButtonCancel->setStyleSheet(QStringLiteral(""));
+        pushButtonCancel->setObjectName(QString::fromUtf8("pushButtonCancel"));
+        pushButtonCancel->setStyleSheet(QString::fromUtf8(""));
         pushButtonCancel->setAutoDefault(false);
 
         horizontalLayout_2->addWidget(pushButtonCancel);
 
         pushButton = new QPushButton(Connexion);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setStyleSheet(QStringLiteral(""));
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8(""));
 
         horizontalLayout_2->addWidget(pushButton);
 
@@ -325,22 +356,24 @@ public:
 
     void retranslateUi(QDialog *Connexion)
     {
-        Connexion->setWindowTitle(QApplication::translate("Connexion", "Connection - QtMyAdmin", nullptr));
-        labelTitle->setText(QApplication::translate("Connexion", "Welcome to", nullptr));
-        label->setText(QApplication::translate("Connexion", "Qt", nullptr));
-        label_2->setText(QApplication::translate("Connexion", "MyAdmin", nullptr));
-        labelConnexion->setText(QApplication::translate("Connexion", "Connection page", nullptr));
-        labelConnectionError->setText(QApplication::translate("Connexion", "-- incorrect information --", nullptr));
-        labelHostname->setText(QApplication::translate("Connexion", "Host :", nullptr));
-        lineEditHostname->setText(QApplication::translate("Connexion", "172.28.100.3", nullptr));
-        labelDatabase->setText(QApplication::translate("Connexion", "Database :", nullptr));
-        lineEditDatabase->setText(QApplication::translate("Connexion", "kallemand_zoo", nullptr));
-        labelUsername->setText(QApplication::translate("Connexion", "Username :", nullptr));
-        lineEditUsername->setText(QApplication::translate("Connexion", "esimon", nullptr));
-        labelPassword->setText(QApplication::translate("Connexion", "Password :", nullptr));
-        lineEditPassword->setText(QApplication::translate("Connexion", "elini01", nullptr));
-        pushButtonCancel->setText(QApplication::translate("Connexion", "Cancel", nullptr));
-        pushButton->setText(QApplication::translate("Connexion", "Connect", nullptr));
+        Connexion->setWindowTitle(QCoreApplication::translate("Connexion", "Connection - QtMyAdmin", nullptr));
+        labelTitle->setText(QCoreApplication::translate("Connexion", "Welcome to", nullptr));
+        label->setText(QCoreApplication::translate("Connexion", "Qt", nullptr));
+        label_2->setText(QCoreApplication::translate("Connexion", "MyAdmin", nullptr));
+        labelConnexion->setText(QCoreApplication::translate("Connexion", "Connection page", nullptr));
+        label_3->setText(QCoreApplication::translate("Connexion", "Select the type of database :", nullptr));
+        labelConnectionError->setText(QCoreApplication::translate("Connexion", "-- incorrect information --", nullptr));
+        labelHostname->setText(QCoreApplication::translate("Connexion", "Host :", nullptr));
+        lineEditHostname->setText(QCoreApplication::translate("Connexion", "172.28.100.3", nullptr));
+        labelDatabase->setText(QCoreApplication::translate("Connexion", "Database :", nullptr));
+        lineEditDatabase->setText(QCoreApplication::translate("Connexion", "kallemand_zoo", nullptr));
+        pushButtonBrowse->setText(QCoreApplication::translate("Connexion", "Browse", nullptr));
+        labelUsername->setText(QCoreApplication::translate("Connexion", "Username :", nullptr));
+        lineEditUsername->setText(QCoreApplication::translate("Connexion", "esimon", nullptr));
+        labelPassword->setText(QCoreApplication::translate("Connexion", "Password :", nullptr));
+        lineEditPassword->setText(QCoreApplication::translate("Connexion", "elini01", nullptr));
+        pushButtonCancel->setText(QCoreApplication::translate("Connexion", "Cancel", nullptr));
+        pushButton->setText(QCoreApplication::translate("Connexion", "Connect", nullptr));
     } // retranslateUi
 
 };

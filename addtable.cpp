@@ -129,7 +129,6 @@ void AddTable::on_pushButtonCreateTable_clicked()
     QSqlQuery addTableRequest;
 
     if(addTableRequest.exec(request)) {
-        ((MainWindow*)parent())->afficherTable();
         close();
     } else{
         ui->labelError->setWordWrap(true);

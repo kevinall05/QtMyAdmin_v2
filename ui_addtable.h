@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'addtable.ui'
 **
-** Created by: Qt User Interface Compiler version 5.11.3
+** Created by: Qt User Interface Compiler version 6.2.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -37,9 +37,9 @@ public:
     void setupUi(QDialog *AddTable)
     {
         if (AddTable->objectName().isEmpty())
-            AddTable->setObjectName(QStringLiteral("AddTable"));
+            AddTable->setObjectName(QString::fromUtf8("AddTable"));
         AddTable->resize(1364, 764);
-        AddTable->setStyleSheet(QLatin1String("*{\n"
+        AddTable->setStyleSheet(QString::fromUtf8("*{\n"
 "font-family: quicksand;\n"
 "font-size: 15px; \n"
 "}\n"
@@ -66,7 +66,7 @@ public:
 "font-size: 16px;\n"
 "}"));
         verticalLayout = new QVBoxLayout(AddTable);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         tableWidgetAddTable = new QTableWidget(AddTable);
         if (tableWidgetAddTable->columnCount() < 8)
             tableWidgetAddTable->setColumnCount(8);
@@ -86,19 +86,19 @@ public:
         tableWidgetAddTable->setHorizontalHeaderItem(6, __qtablewidgetitem6);
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
         tableWidgetAddTable->setHorizontalHeaderItem(7, __qtablewidgetitem7);
-        tableWidgetAddTable->setObjectName(QStringLiteral("tableWidgetAddTable"));
+        tableWidgetAddTable->setObjectName(QString::fromUtf8("tableWidgetAddTable"));
         tableWidgetAddTable->verticalHeader()->setVisible(false);
 
         verticalLayout->addWidget(tableWidgetAddTable);
 
         horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
         pushButtonCreateTable = new QPushButton(AddTable);
-        pushButtonCreateTable->setObjectName(QStringLiteral("pushButtonCreateTable"));
+        pushButtonCreateTable->setObjectName(QString::fromUtf8("pushButtonCreateTable"));
 
         horizontalLayout->addWidget(pushButtonCreateTable);
 
@@ -110,10 +110,10 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         labelError = new QLabel(AddTable);
-        labelError->setObjectName(QStringLiteral("labelError"));
-        labelError->setStyleSheet(QStringLiteral(""));
+        labelError->setObjectName(QString::fromUtf8("labelError"));
+        labelError->setStyleSheet(QString::fromUtf8(""));
         labelError->setTextFormat(Qt::PlainText);
         labelError->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
         labelError->setWordWrap(false);
@@ -131,25 +131,25 @@ public:
 
     void retranslateUi(QDialog *AddTable)
     {
-        AddTable->setWindowTitle(QApplication::translate("AddTable", "Add a table - QtMyAdmin", nullptr));
+        AddTable->setWindowTitle(QCoreApplication::translate("AddTable", "Add a table - QtMyAdmin", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidgetAddTable->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("AddTable", "Name", nullptr));
+        ___qtablewidgetitem->setText(QCoreApplication::translate("AddTable", "Name", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidgetAddTable->horizontalHeaderItem(1);
-        ___qtablewidgetitem1->setText(QApplication::translate("AddTable", "Type", nullptr));
+        ___qtablewidgetitem1->setText(QCoreApplication::translate("AddTable", "Type", nullptr));
         QTableWidgetItem *___qtablewidgetitem2 = tableWidgetAddTable->horizontalHeaderItem(2);
-        ___qtablewidgetitem2->setText(QApplication::translate("AddTable", "Lenght/Values", nullptr));
+        ___qtablewidgetitem2->setText(QCoreApplication::translate("AddTable", "Lenght/Values", nullptr));
         QTableWidgetItem *___qtablewidgetitem3 = tableWidgetAddTable->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QApplication::translate("AddTable", "Default", nullptr));
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("AddTable", "Default", nullptr));
         QTableWidgetItem *___qtablewidgetitem4 = tableWidgetAddTable->horizontalHeaderItem(4);
-        ___qtablewidgetitem4->setText(QApplication::translate("AddTable", "Attributes", nullptr));
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("AddTable", "Attributes", nullptr));
         QTableWidgetItem *___qtablewidgetitem5 = tableWidgetAddTable->horizontalHeaderItem(5);
-        ___qtablewidgetitem5->setText(QApplication::translate("AddTable", "Null", nullptr));
+        ___qtablewidgetitem5->setText(QCoreApplication::translate("AddTable", "Null", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = tableWidgetAddTable->horizontalHeaderItem(6);
-        ___qtablewidgetitem6->setText(QApplication::translate("AddTable", "Index", nullptr));
+        ___qtablewidgetitem6->setText(QCoreApplication::translate("AddTable", "Index", nullptr));
         QTableWidgetItem *___qtablewidgetitem7 = tableWidgetAddTable->horizontalHeaderItem(7);
-        ___qtablewidgetitem7->setText(QApplication::translate("AddTable", "A.I", nullptr));
-        pushButtonCreateTable->setText(QApplication::translate("AddTable", "CREATE TABLE", nullptr));
-        labelError->setText(QApplication::translate("AddTable", "TextLabel", nullptr));
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("AddTable", "A.I", nullptr));
+        pushButtonCreateTable->setText(QCoreApplication::translate("AddTable", "CREATE TABLE", nullptr));
+        labelError->setText(QCoreApplication::translate("AddTable", "TextLabel", nullptr));
     } // retranslateUi
 
 };
